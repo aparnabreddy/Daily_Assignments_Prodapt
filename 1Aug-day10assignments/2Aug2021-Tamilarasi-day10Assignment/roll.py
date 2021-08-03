@@ -14,25 +14,43 @@ def addStudent():
     print(end="Average Mark = ")
     print(average)
     stud_dict[roll_no] = name,Adminno, average
-
+    if average>=91 and average<=100:
+        print("Your Rank is A1")
+    elif average>=81 and average<91:
+        print("Your Rank is A2")
+    elif average>=71 and average<81:
+        print("Your Rank is B1")
+    elif average>=61 and average<71:
+        print("Your Rank is B2")
+    elif average>=51 and average<61:
+        print("Your Rank is C1")
+    elif average>=41 and average<51:
+        print("Your Rank is C2")
+    elif average>=33 and average<41:
+        print("Your Rank is D")
+    elif average>=21 and average<33:
+        print("Your Rank is E1")
+    elif average>=0 and average<21:
+        print("Your Rank is E2")
+    else:
+        print("Invalid Input!")
 
 while(1):
     print("1. Add Student")
     print("2. Search Student Based On Roll Number")
-    print("3. Studentapi")
-    print("4. Exit")
+    print("3. Exit")
     option=int(input("Enter your option :"))
     if option==1:
-        a=addStudent()
-        pass
+        s=addStudent()
+        print(stud_dict)
     if option==2:
         srn = int(input("Enter the roll number of the student whose details you'd like to view: "))
         if srn in stud_dict:
             print(stud_dict[srn])
         else:
             print("No such student.")
-    print(stud_dict)
     if option==3:
-        print()
-    if option ==4:
         break
+
+        
+            
