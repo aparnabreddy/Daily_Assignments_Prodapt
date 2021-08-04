@@ -1,16 +1,6 @@
 import re
 Students_List=[]
 class StudentDetails:
-    # def __init__(self, name, rollno,admin,physics,chemistry,biology,maths,kannada,english):
-    #     self.name=name
-    #     self.rollno=rollno
-    #     self.admin=admin
-    #     self.physics=physics
-    #     self.chemistry=chemistry
-    #     self.biology=biology
-    #     self.maths=maths
-    #     self.kannada=kannada
-    #     self.english=english
     def addstudentdetails(self, name, rollno,admin,physics,chemistry,biology,maths,kannada,english):
         totalmarks=physics+chemistry+biology+maths+kannada+english
         dict1={"total":totalmarks,"name":name,"rollno":rollno,"admin":admin,"physics":physics, "chemistrt":chemistry, "biology": biology,"maths":maths,"kannada":kannada,"english":english}
