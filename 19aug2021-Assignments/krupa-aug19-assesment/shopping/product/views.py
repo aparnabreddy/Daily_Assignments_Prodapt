@@ -16,7 +16,7 @@ def mypro(request,fetchid):
     try:
         product1=product.objects.get(id=fetchid)
         if(request.method=="GET"):
-            product_serializer=productSerializer(product)
+            product_serializer=productSerializer(product1)
             return JsonResponse(product_serializer.data,safe=False)
 
         if(request.method=="DELETE"):

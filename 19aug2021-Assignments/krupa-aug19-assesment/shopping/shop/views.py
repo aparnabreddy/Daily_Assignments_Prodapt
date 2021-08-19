@@ -17,7 +17,7 @@ def myshop(request,fetchid):
     try:
         shop1=Shop.objects.get(id=fetchid)
         if(request.method=="GET"):
-            shop_serializer=shopSerializer(shop)
+            shop_serializer=shopSerializer(shop1)
             return JsonResponse(shop_serializer.data,safe=False)
 
         if(request.method=="DELETE"):

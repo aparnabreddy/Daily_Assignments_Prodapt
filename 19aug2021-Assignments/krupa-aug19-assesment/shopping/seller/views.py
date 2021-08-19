@@ -19,7 +19,7 @@ def mysell(request,fetchid):
     try:
         sell1=Seller.objects.get(id=fetchid)
         if(request.method=="GET"):
-            sell_serializer=sellerSerializer(Seller)
+            sell_serializer=sellerSerializer(Sell1)
             return JsonResponse(sell_serializer.data,safe=False)
 
         if(request.method=="DELETE"):
