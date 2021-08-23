@@ -1,0 +1,32 @@
+{% extends 'header.html' %}
+{% block mycontent %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+<table class="table">
+    <thead class="table table-success">
+<tr>
+    <th>Country_name</th>
+    <th>Gold_medal</th>
+    <th>Silver_medal</th>
+    <th>Bronze_medal</th>
+    
+</tr>
+    </thead>
+<thbody>
+{% for i in data %}
+    <tr>
+        <td>{{ i.Country_name}}</td>
+        <td>{{i.Gold_medal}}</td>
+        <td>{{i.Silver_medal}}</td>
+        <td>{{i.Bronze_medal}}</td>
+    </tr>
+{% endfor %}
+</thbody>
+</table>
+            </div>
+            <!-- <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"></div> -->
+            
+        </div>
+    </div>
+{% endblock %}
