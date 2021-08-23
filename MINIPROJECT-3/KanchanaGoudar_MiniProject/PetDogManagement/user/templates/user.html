@@ -1,0 +1,44 @@
+{% extends 'header2.html' %}
+
+{% block Mycontent %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <form action="../add/" method="POST">
+                <table class="table table-borderless">
+                    <h1 align="center">USER REGISTERATION</h1><br><br><br>
+                    <tr>
+                        <td>USER CODE</td>
+                        <td><input name="Ucode" type="number" class="form-control" placeholder="Please enter user code"></td>
+                    </tr>
+                    <tr>
+                        <td>NAME</td>
+                        <td><input name="Name" type="text" class="form-control" placeholder="Please enter user name"></td>
+                    </tr>
+                    
+                        <td>MOBILE NUMBER</td>
+                        <td><input name="Mobileno" type="number" class="form-control" placeholder="Please enter user mobile number"></td>
+                    </tr>
+                    <tr>
+                        <td>USERNAME</td>
+                        <td><input name="Username" type="text" class="form-control" placeholder="Please enter username"></td>
+                    </tr>
+                    <tr>
+                        <td>PASSWORD</td>
+                        <td><input name="Password" type="password" class="form-control" placeholder="Please enter password"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="btn btn-primary">REGISTER</button></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+
+    {% endblock %}
+    

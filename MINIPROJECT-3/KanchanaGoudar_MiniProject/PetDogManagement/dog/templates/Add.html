@@ -1,0 +1,37 @@
+{% extends 'header.html' %}
+
+{% block MyContent %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <form action="../add/" method="POST">
+                <table class="table table-borderless">
+                    <tr>
+                        <td>DOG ID</td>
+                        <td><input name="Dogid" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>DOG NAME</td>
+                        <td><input name="Dname" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>DOG AGE</td>
+                        <td><input name="Dage" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>PRICE</td>
+                        <td><input name="Dprice" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="btn btn-primary">ADD</button></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+{% endblock %}
