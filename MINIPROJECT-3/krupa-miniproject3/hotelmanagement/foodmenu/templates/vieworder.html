@@ -1,0 +1,43 @@
+{% extends 'menu.html' %}
+{% block myfood %}
+    
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+        <div class="col col-12 col-sm-8 col-lg-8 col-xl-8">
+            <p>FOOD ORDER</p>
+
+<table class="table table-striped">
+<thead class="table-dark">
+<tr>
+    <th>Break fast</th>
+    <th>Lunch</th>
+    <th>Dinner</th>
+    <th>Dessert</th>
+    <th>Drinks</th>
+    <th>Chats</th> 
+</tr>
+</thead>
+
+<tbody>
+    {% for i in data %}
+<tr>
+    <td>{{ i.breakfast }}</td>
+    <td>{{ i.lunch }}</td>
+    <td>{{ i.dinner }}</td>
+    <td>{{ i.dessert }}</td>
+    <td>{{ i.drinks }}</td>
+    <td>{{ i.chats }}</td>   
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+   
+{% endblock %}

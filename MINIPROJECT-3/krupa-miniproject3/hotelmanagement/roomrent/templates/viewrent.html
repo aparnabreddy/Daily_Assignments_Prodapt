@@ -1,0 +1,43 @@
+{% extends 'head.html' %}
+{% block myroom %}
+    
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+        <div class="col col-12 col-sm-8 col-lg-8 col-xl-8">
+            <p>View all customer</p>
+<table class="table table-striped">
+<thead class="table-dark">
+<tr>
+    <th>roomclass</th>
+    <th>classprice</th>
+    <th>nigths</th>
+    <th>roomno</th>
+     
+</tr>
+
+
+</thead>
+<tbody>
+    {% for i in data %}
+<tr>
+    <td>{{ i.roomclass }}</td>
+    <td>{{ i.classprice }}</td>
+    <td>{{ i.nigths }}</td>
+    <td>{{ i.roomno }}</td>
+   
+    
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+   
+{% endblock %}
