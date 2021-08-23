@@ -1,0 +1,58 @@
+
+{% extends 'header.html' %}
+
+{% block mycontent %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+
+        </div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <form action="http://127.0.0.1:8000/register/add/" method="post">
+                <table class="table table-borderless">
+                    <tr>
+                        <td> Name </td>
+                        <td> <input name="name" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Roll_No </td>
+                        <td> <input name="rollno" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> College </td>
+                        <td>  <input name="college" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Mail_id </td>
+                        <td> <input name="mailid" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Exam_type </td>
+                        <td> <input name="examtype" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Fee </td>
+                        <td> <input name="fee" type="text" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Reg_Date </td>
+                        <td> <input name="reg_date" type="date" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td> Reg_Close_Date </td>
+                        <td> <input name="reg_close_date" type="date" class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <center> <Button class="btn btn-success"> Submit </Button> </center> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
