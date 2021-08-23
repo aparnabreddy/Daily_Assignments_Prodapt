@@ -1,0 +1,98 @@
+{% extends 'heading.html' %}
+{% block mycontent %}
+   
+    <div class="container" >
+        <div class="rows">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <table class="table table-borderless">
+
+                    <tr>
+                        <td>
+                            <center>
+                                <b>
+                                    <h4><u> <i> BOOK YOUR TICKET </i> </u> </h4>
+                                </b>
+                            </center>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbapwF5XeB0HtIzBpQ6oFlPBA1PrevHGtCXg&usqp=CAU" class="rounded" height="70%" width="70%">
+                        </td>
+                    </tr>
+                    <form action="http://127.0.0.1:8000/customer/addcustomerapi/" method="post">
+                        <tr>
+                            <td>Name</td>
+                            <td> <input placeholder="enter name" name="name" type="text" class="form-control"> </td>
+                        </tr>
+                        <tr>
+                            <td>Movie Name</td>
+                            <td> 
+                                   <select name="mname" id="" class="form-control">
+                                    <option selected="true" disabled="disabled">Choose movie</option>
+                                       <option value="Shershah">Shershah</option>
+                                       <option value="Kapil Dev">Kapil Dev</option>
+                                       <option value="Sara's">Sara's</option>
+                                   </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number of Tickets</td>
+                            <td> <input placeholder="enter number of tickets" name="ntickets" type="text" class="form-control"> </td>
+                        </tr>
+                        <tr>
+                            <td>Timings</td>
+                            <td>
+                                <select  name="timings" id="" class="form-control">
+                                    <option selected="true" disabled="disabled">Choose timing</option>
+                                    <option value="12pm">12pm</option>
+                                    <option value="3pm">3pm</option>
+                                    <option value="6pm">6pm</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Audi</td>
+                            <td>
+                                <select name="audi" id="" class="form-control">
+                                    <option selected="true" disabled="disabled">Choose Audi</option>
+                                    <option value="PVR">PVR</option>
+                                    <option value="INOX">INOX</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Seat Number</td>
+                            <td> <select name="seatnum" id="" class="form-control">
+                                <option selected="true" disabled="disabled">Choose Seat number</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <button class="btn btn-success">book</button> </td>
+                        </tr>
+                        
+                    </table>
+                    </form>
+                    
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+
+    {% endblock  %}
+    
