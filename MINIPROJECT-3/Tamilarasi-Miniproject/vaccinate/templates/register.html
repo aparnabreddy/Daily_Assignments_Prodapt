@@ -1,0 +1,44 @@
+{% extends 'welcome.html' %}
+{% block myContent %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                
+                <form action="../add/" method="post">
+                <table class="table">
+
+                    <table class="borderless">
+                    <h1> REGISTRATION FORM </h1>
+                    <tr>
+                        <td> Vaccinate Number </td>
+                        <td><input name="vno" placeholder="Enter the Vaccinate Number" type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td> Name </td>
+                        <td><input name="vname" placeholder="Enter the Name" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td> Address </td>
+                        <td><input name="vaddress" placeholder="Enter the Address" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td> Aadhar Number </td>
+                        <td><input name="vaadharno" placeholder="Enter the Aadhar Number " type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td> Mobile Number </td>
+                        <td> <input name="vmblno" placeholder="Enter the mobile number" type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                        <center> <Button class="btn btn-danger">Submit</Button> </center></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+    {% endblock %}
