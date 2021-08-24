@@ -1,0 +1,40 @@
+{% extends 'header_artifacts.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <form action="http://127.0.0.1:8000/artifacts/addpage/" method="post">
+            <h2>REGISTRATION FORM</h2>
+            <table class="table table-borderless">
+                <tr>
+                    <td>ARTIFACT NAME</td>
+                    <td><input name="name" placeholder="ENTER THE NAME" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>ARTIFACT CODE</td>
+                    <td><input name="acode" placeholder="ENTER THE CODE" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION</td>
+                    <td><input name="description" placeholder="DESCRIPTION" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>LOCATION</td>
+                    <td><input name="location" placeholder="LOACTION" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>YEAR</td>
+                    <td><input name="year" placeholder="ENTER THE YEAR" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button class="btn btn-dark">REGISTER</button></center></td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>    
+{% endblock %}

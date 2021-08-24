@@ -1,0 +1,40 @@
+{% extends 'header_visitors.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <form action="http://127.0.0.1:8000/visitors/addpage/" method="post">
+            <h2>REGISTRATION FORM</h2>
+            <table class="table table-borderless">
+                <tr>
+                    <td>VISITOR NAME</td>
+                    <td><input name="name" placeholder="ENTER THE NAME" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>TICKET NO</td>
+                    <td><input name="ticketno" placeholder="ENTER THE TICKET NO" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>AGE</td>
+                    <td><input name="age" placeholder="ENTER THE AGE" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS</td>
+                    <td><input name="address" placeholder="ENTER ADDRESS" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>PH NO</td>
+                    <td><input name="phno" placeholder="ENTER THE PH NO" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button class="btn btn-dark">REGISTER</button></center></td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>    
+{% endblock %}
