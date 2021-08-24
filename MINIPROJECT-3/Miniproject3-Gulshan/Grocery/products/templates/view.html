@@ -1,0 +1,40 @@
+{% extends 'header.html' %}
+
+{% block mycontent %}
+    <div class="container">
+        <div class="row">
+          <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+          </div>
+          <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+             <table class="table table-borderless">
+                 <thead class="table-warning">
+                 <tr>
+                     <th>productname</th>
+                     <th>discription</th>
+                     <th>price</th>
+                     <th>manufacturer</th>
+                     <th>manufacturingdate</th>
+                     <th>expirydate</th>
+                 </tr>
+                </thead>
+
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i.productname}}</td>
+                        <td>{{i.discription}}</td>
+                        <td>{{i.price}}</td>
+                        <td>{{i.manufacturer}}</td>
+                        <td>{{i.manufacturingdate}}</td>
+                        <td>{{i.expirydate}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                  <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+                  </div>
+              </table>
+          </div>
+        </div>
+    </div> 
+
+{% endblock %}
