@@ -1,0 +1,51 @@
+{% extends 'header1.html'  %}
+
+{% block myContent  %}
+<form action="http://127.0.0.1:8000/productapp/add/" method="post">
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <div class=" table table-borderless">
+                    <tr>
+                        <td>Main Course</td>
+                            <select name="Maincourse" class="form-control",name=""id="">
+                                <option value="Biryani">Biryani</option>
+                                <option value="Butter Chicken">Butter Chicken</option>
+                                <option value="Chole Bhature">Chole Bhature</option>
+                                <option value="Dal Makhani">Dal Makhani</option>
+                                <option value="Palak paneer">Palak paneer</option>
+                            </select>
+                        </td>
+                            </tr>
+                            <td>Starter</td>
+                            <select name="Starter" class="form-control",name=""id="">
+                                <option value="Black bean Dip">Black bean Dip</option>
+                                <option value="Paneer Tikka">Paneer Tikka</option>
+                                <option value="Sweet Potato tikki">Sweet Potato tikki</option>
+                                <option value="Bread Roll Recipe">Bread Roll Recipe</option>
+                                <option value="Idli Fry Recipe">Idli Fry Recipe</option>
+                            </select>
+                        </tr>
+                        <tr>
+                        <td>Dessert</td>
+                        <select name="Dessert" class="form-control",name=""id="">
+                            <option value="Angel food cake">Angel food cake</option>
+                            <option value="Apple and butterscotch pie">Apple and butterscotch pie</option>
+                            <option value="Almond and date cake">Almond and date cake</option>
+                            <option value="Chocolate & mint cheesecake">Chocolate & mint cheesecake</option>
+                            <option value="Banana split">Banana split</option>
+                        </select>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td><center><button class="btn-success form-control">Submit Order</button></center></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+</form>
+{% endblock %}
