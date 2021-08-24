@@ -1,0 +1,50 @@
+{% extends 'header.html' %}
+{% block mycontent %}
+<title>register page</title>
+    <div class="container">
+        <div class="row">
+            <div class="col col-2 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-8 col-sm-8 col-md-8 col-xl-8 col-xxl-8">
+                <form action="http://127.0.0.1:8000/customer/add/" method="post">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>name</td>
+                            <td><input name="name" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>address</td>
+                            <td><textarea name="address" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>pincode</td>
+                            <td><input type="number" name="pincode"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>mobnum</td>
+                            <td><input type="number" name="mobnum"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>tripid</td>
+                            <td><input type="number" name="tripid"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>tripcost</td>
+                            <td><input type="number" name="tripcost"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>tripplan</td>
+                            <td><input type="text" name="tripplan"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn btn-info">REGISTER</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col col-2 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
