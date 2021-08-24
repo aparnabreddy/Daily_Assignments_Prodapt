@@ -1,0 +1,33 @@
+{% extends 'head.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+<table class="table">
+<thead class="table table-primary">
+<tr>
+    <th>Name</th>
+    <th>Game</th>
+    <th>Country</th>
+    <th>Place</th>
+    <th>Medal</th>
+
+</tr>
+    </thead>
+<thbody>
+{% for i in data %}
+    <tr>
+        <td>{{ i.Name}}</td>
+        <td>{{i.Gamel}}</td>
+        <td>{{i.Country}}</td>
+        <td>{{i.Place}}</td>
+        <td>{{i.Medal}}</td>
+    </tr>
+{% endfor %}
+</thbody>
+</table>
+        </div>
+                
+    </div>
+</div>
+{% endblock %}
