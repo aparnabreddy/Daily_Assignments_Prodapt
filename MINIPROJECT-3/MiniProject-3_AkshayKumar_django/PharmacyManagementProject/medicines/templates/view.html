@@ -1,0 +1,43 @@
+{% extends 'head.html' %}
+{% block myContent %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <br>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rack number</th>
+                        <th>Medicine Name</th>
+                        <th>Medicine Category</th>
+                        <th>Manufacturing Date</th>
+                        <th>Expiry Date</th>
+                        <th>Cost</th>
+                        <th>Stock</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i.rackno}}</td>
+                        <td>{{i.medname}}</td>
+                        <td>{{i.medcat}}</td>
+                        <td>{{i.mfgdate}}</td>
+                        <td>{{i.expdate}}</td>
+                        <td>{{i.cost}}</td>
+                        <td>{{i.stock}}</td>
+                    </tr>
+                   {% endfor %}
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl 2"></div>
+    </div>
+</div>
+
+{% endblock %}
