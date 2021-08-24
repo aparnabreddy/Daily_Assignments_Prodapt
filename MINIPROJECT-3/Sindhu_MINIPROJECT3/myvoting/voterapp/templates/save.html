@@ -1,0 +1,92 @@
+<!-- <Button> LOGIN </Button> -->
+<!-- <html>
+<head>
+<title> Hello </title>
+</head>
+<body>
+    <input/>
+</body>
+</html> -->
+
+</head>
+<body>
+    {%extends 'header.html'%}
+    {%block myContent%}
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 "></div>
+                <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xl-8 col-xxl-8">
+                    
+            <form action="http://127.0.0.1:8000/voterapp/add/" method="post">
+                <table class="table table-borderless">
+            <tr>
+                <td> VOTER_ID </td>
+                <td><input name="vid" type="number" class="form-control"></td>
+            </tr>
+            <tr>
+                <td> VOTER_NAME </td>
+                <td> <input name="vname" type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td> VOTER_ADDRESS </td>
+                <td> <input name="vaddress" type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td> VOTER_PHONENO </td>
+                <td> <input name="vphoneno" type="number" class="form-control"></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td><Button class="btn btn-success">SAVE</Button></td>
+            </tr>
+        </form>
+        </table>
+        </div>
+    
+    
+            <div class="col-12 col-2 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+     
+    </div>
+    </div>   
+    
+    {%endblock%}
+
+
+
+
+<!-- <table class="table">
+  <tr>
+      <td> Username </td>
+      <td> <input class="form-control" type="text"> </td>
+ </tr>
+  <tr>
+      <td> Password </td>
+      <td> <input class="form-control" type="password"> </td>
+  </tr>
+  <tr>
+    <td> Country </td>
+    <td>
+    <select name="" id="">
+        <option value="India"> INDIA </option>
+        <option value="China"> CHAIN </option>
+        <option value="UAE"> UAE </option>
+    </select>
+
+    </td>
+    </tr>
+  <tr>
+      <td> <input type="radio"> </td>
+      <td> Agree Terms and Conditions </td>
+</tr>
+<tr>
+    <td></td>
+    <td> <Button class="btn btn-dark">LOGIN </Button></td>
+
+
+</tr>
+
+</table> -->
+
+</body>
+</html>
