@@ -1,0 +1,44 @@
+{%extends 'header.html'%}
+
+{% block page %}
+<form action="" method="post">
+    <table class="table table-borderless">
+
+      <tr>
+        <td>Full Name</td>
+        <td><input name="name"type="text" class="form-control"></td>
+      </tr>
+      
+      <tr>
+          <td> Address</td>
+          <td><input type="text" class="form-control"></td>
+      </tr>
+      <tr>
+          <td>Pincode</td>
+          <td><input type="text" class="form-control"></td>
+      </tr>
+      <tr>
+          <td>Mobile Number</td>
+          <td><input type="number" class="form-control"></td>
+      </tr>
+      <tr>   
+        <td>Email Address</td>
+          <td><input name="email" type="text" class="form-control"></td>
+      </tr>
+      <tr>
+          <td><input type="radio" ></td>
+          <td>Agree Terms and Condition</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><button class="btn btn-danger">Register</button></td>
+      </tr>
+
+
+   </form>
+      
+
+      </table>
+
+
+{% endblock %}
