@@ -1,0 +1,94 @@
+{% extends 'menu.html' %}
+{% block myfood %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2">
+        </div>
+        <div class="col col-12 col-sm-8 col-lg-8 col-xl-8">
+
+            <form action="http://127.0.0.1:8000/food/addmenu/" method="POST">
+
+
+            <table class="table table-borderless">
+                <tr>
+                    <td>Break fast</td>
+                    <td><select name="breakfast" id="" class="form-control">           
+                        <option value="Tomato bath">Tomato bath</option>
+                        <option value="Fried rice">Fried rice</option>
+                        <option value="Dosa">Dosa</option>
+                        <option value="Rice cake">Rice cake</option>
+                        <option value="Veg biryani">Veg Biryani</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td> <select name="lunch" id="" class="form-control">           
+                        <option value="Non-veg biryani">Non-veg Biryani</option>
+                        <option value="Chapathi">Chapathi</option>
+                        <option value="Parota">Parota</option>
+                        <option value="Butter nan">Butter nan</option>
+                        <option value="Rice sambar">Rice sambar</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td> <select name="dinner" id="" class="form-control">           
+                            <option value="Chapathi">Chapathi</option>
+                            <option value="Roti">Roti</option>
+                            <option value="Ghee rice">Ghee rice</option>
+                            <option value="rice">Rice</option>
+                            </select>
+                    </td>
+
+                    
+                </tr>
+                <tr>
+                    <td>Dessert</td>
+                    <td> <select name="dessert" id="" class="form-control">           
+                        <option value="Gadbad">Gadbad</option>
+                        <option value="Lava cake">Lava cake</option>
+                        <option value="Falude">Faluda</option>
+                        <option value="Cakes">cakes</option>
+                        </select></td>
+
+                </tr>
+                <tr>
+                    <td>Drinks</td>
+                    <td> <select name="drinks" id="" class="form-control">           
+                        <option value="Cooldrinks">Cooldrinks</option>
+                        <option value="milk shake">milk shake</option>
+                        <option value="Wine">Wine</option>
+                        <option value="Fruit jucies">fruit jucies</option>
+                        </select></td>
+
+                </tr>
+                <tr>
+                    <td>Chats</td>
+                    <td><select name="chats" id="" class="form-control">           
+                        <option value="Pani puri">Pani puri</option>
+                        <option value="Gobi">Gobi</option>
+                        <option value="Manchuri">Manchuri</option>
+                        <option value="French fries">French fries</option>
+                        </select>
+
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td> </td>
+                    <td> <center><button class="btn btn-primary">ORDER</button> </center>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+
+
+        <div class="col col-12 col-sm-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+
+{% endblock %}

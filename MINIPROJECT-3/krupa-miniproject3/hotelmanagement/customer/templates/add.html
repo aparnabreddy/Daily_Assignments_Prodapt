@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+{% block myContent %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+            </div>
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+
+            <form action="http://127.0.0.1:8000/customer/add/" method="POST">
+
+
+                <table class="table table-borderless">
+                    <tr>
+                        <td>Name</td>
+                        <td> <input name="name" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td> <input name="address" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td> <input name="email" type="text" class="form-control"></td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>Mobli no</td>
+                        <td> <input name="mbno" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Adhar Number</td>
+                        <td> <input name="adharno" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Check IN</td>
+                        <td> <input name="checkin" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Check OUT</td>
+                        <td> <input name="checkout" type="text" class="form-control"></td>
+
+                    </tr>
+                    <tr>
+                        <td>ROOM NO</td>
+                        <td> <input name="roomno" type="text" class="form-control"></td>
+
+                    </tr>
+                   
+                    <tr>
+                        <td> </td>
+                        <td> <center><button class="btn btn-danger">Register</button> </center>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+
+
+            <div class="col col-12 col-sm-4 col-lg-4 col-xl-4">
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
