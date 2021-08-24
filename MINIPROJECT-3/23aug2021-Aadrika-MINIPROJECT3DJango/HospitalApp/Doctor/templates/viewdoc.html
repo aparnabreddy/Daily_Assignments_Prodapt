@@ -1,0 +1,42 @@
+{% extends 'headings.html' %}
+{% block mycontent %}
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+<table class="table table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>Doctor Name</th>
+      <th>Doctor Address</th>
+      <th>Specialization</th>
+      <th>Contact</th>
+      <th>City</th>
+      <th>Email</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in data %}
+    <tr>
+      <td> {{ i.dname }}</td>
+      <td>{{ i.dadd}}</td>
+      <td>{{ i.dspecial }}</td>
+      <td>{{ i.dcont }}</td>
+      <td>{{ i.dcity }}</td>
+      <td>{{ i.demail }}</td>
+
+      </tr>
+      {% endfor %}
+  </tbody>
+</table> </div>
+<div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+
+
+
+</div>
+</div>
+  </div>
+</div>
+      {% endblock  %}

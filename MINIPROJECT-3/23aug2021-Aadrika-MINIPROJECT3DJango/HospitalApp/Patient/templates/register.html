@@ -1,0 +1,66 @@
+{% extends 'heading.html' %}
+{% block mycontent %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+             
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img src="https://thumbs.dreamstime.com/b/hospital-registration-nolan-icon-simple-thin-line-outline-vector-icons-ui-ux-website-mobile-application-white-176551275.jpg" class="center" width="500" height="400" alt="">
+         <form action="http://127.0.0.1:8000/patient/addpatient/" method="post">
+         <table class="table table-borderless table-striped">
+              <tr>
+                  <td>Name of Patient</td>
+                  <td><input name="pname" type="text" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>Address</td>
+                  <td><input name="padd" type="text" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>DOB</td>
+                  <td><input name="pdob" type="date" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>Blood Group</td>
+                  <td><select name="pbg" id="" class="form-control">
+                      <option value="A+">A+</option>
+                      <option value="B+">B+</option>
+                      <option value="O+">O+</option>
+                      <option value="AB+">AB+</option>
+                      <option value="A-">A-</option>
+                      <option value="B-">B-</option>
+                      <option value="O-">O-</option>
+                      <option value="AB-">AB-</option>
+                  </select></td>
+              </tr>
+              <tr>
+                  <td>CITY</td>
+                  <td><input name="pcity" type="text" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>Email</td>
+                  <td><input name="pemail" type="text" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td>Phone</td>
+                  <td><input name="pphone" type="text" class="form-control"></td>
+              </tr>
+           
+              <tr>
+                  <td></td>
+                  <td><button class="btn btn-success">REGISTER</button></td>
+              </tr>
+          </table>  </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>
+
+    
+</body>
+</html>
+    {% endblock  %}
+
+ 
