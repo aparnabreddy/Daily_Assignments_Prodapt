@@ -1,0 +1,44 @@
+{% extends 'header.html'  %}
+{%  block content  %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+      <table class="table table-stripes">
+        <thead class="table-dark">
+          <tr>
+            <th> Train Name </th>
+            <th> Train Number </th>
+            <th> From Station </th>
+            <th> To Station </th>
+            <th> Running Days </th>
+        </tr>
+        </thead>
+
+        <tbody>
+          {% for i in data  %}
+          <tr>
+            <td> {{ i.trainName }} </td>
+            <td> {{ i.trainNumber }} </td>
+            <td> {{ i.fromStation }} </td>
+            <td> {{ i.toStation }} </td>
+            <td> {{ i.runningDays }} </td>
+          
+        </tr>
+        {% endfor %}
+
+
+        </tbody>
+      </table>
+
+
+    </div>
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+    
+
+{%  endblock  %}
+
+    
