@@ -5,4 +5,4 @@ from trains.models import Trains
 class TrainSerializer(serializers.ModelSerializer):
     class Meta:
         model=Trains
-        fields=('trainName','trainNumber','fromStation','toStation','runningDays')
+        fields=('id','trainName','trainNumber','fromStation','toStation','runningDays')

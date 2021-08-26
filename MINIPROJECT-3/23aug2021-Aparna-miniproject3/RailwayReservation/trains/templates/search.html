@@ -9,8 +9,8 @@
         <form action="http://127.0.0.1:8000/trains/searchtrain/" method="post">
         <table class="table table-borderless">
             <tr>
-                <td> From Station </td>
-                <td> <input type="text" class="form-control" placeholder="Enter from station"> </td>
+                <td> <b>Train Number</b> </td>
+                <td> <input name="trainNumber" type="text" class="form-control" placeholder="Enter train number to search"> </td>
             </tr>
             <tr>
                 <td>  </td>
@@ -19,33 +19,32 @@
         </table>
       </form>
       {% if data  %}
-      <table class="table table-borderless">
-        {% for i in data %}
-        <tr>
-          <td> Train Name </td>
-          <td> {{i.trainName}} </td>
+      <table class="table table-stripes">
+        <thead class="table-dark">
+          <tr>
+            <th> Train Name </th>
+            <th> Train Number </th>
+            <th> From Station </th>
+            <th> To Station </th>
+            <th> Running Days </th>
         </tr>
-        <tr>
-          <td> Train Number </td>
-          <td> {{i.trainNumber}} </td>
-        </tr>
-        <tr>
-          <td> From Station </td>
-          <td> {{i.fromStation}} </td>
-        </tr>
-        <tr>
-          <td>To Station</td>
-          <td> {{i.toStation}} </td>
-        </tr>
-        <tr>
-          <td> Running Days </td>
-          <td> {{i.runningDays}} </td>
+        </thead>
+
+        <tbody>
+          {% for i in data  %}
+          <tr>
+            <td> {{ i.trainName }} </td>
+            <td> {{ i.trainNumber }} </td>
+            <td> {{ i.fromStation }} </td>
+            <td> {{ i.toStation }} </td>
+            <td> {{ i.runningDays }} </td>          
         </tr>
         {% endfor %}
+
+
+        </tbody>
       </table>
       {% endif %}
-      
-        
     </div>
     <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
   </div>

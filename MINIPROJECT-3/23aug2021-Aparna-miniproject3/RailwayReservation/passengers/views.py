@@ -5,7 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse,JsonResponse
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-from django.shortcuts import redirect
 import requests
 
 # Create your views here.
@@ -16,8 +15,9 @@ def add_passenger(request):
 def book_ticket(request):
     return render(request,'bookticket.html')
 
-def update_passenger(request):
-    return render(request,'updatepassenger.html')
+
+def search_passenger(request):
+    return render(request,'searchpassenger.html')
 
 
 def view_all(request):
@@ -27,10 +27,11 @@ def view_all(request):
     return render(request,'viewallpassengers.html',{"data":fetchdata})
 
 
+# def update_passenger(request):
+#     return render(request,'updatepassenger.html')
 
-# def search_passenger(request):
-#     return render(request,'searchpassenger.html')
-
+# def delete_passenger(request):
+    # return render(request,'deletepassenger.html')
 
 @csrf_exempt
 def PassengerPage(request):
@@ -75,25 +76,45 @@ def tickets_list(request):
         ticket_serializer=TicketSerializer(ticket,many=True)
         return JsonResponse(ticket_serializer.data,safe=False)
 
+
 @csrf_exempt
 def passenger_details(request,id):
     try:
-        passenger=Passenger.objects.get(id=id)
+        passengers=Passenger.objects.get(id=id)
         if(request.method =="GET"):
-            passenger_serializer=PassengerSerializer(passenger)
-            return JsonResponse(passenger_serializer.data,safe=False,status=status.HTTP_200_OK)
+            passengers_serializer=PassengerSerializer(passengers)
+            return JsonResponse(passengers_serializer.data,safe=False,status=status.HTTP_200_OK)
+
         if (request.method=="DELETE"):
-            passenger.delete()
+            passengers.delete()
             return HttpResponse("Deleted",status=status.HTTP_200_OK)
         if (request.method=="PUT"):
-            mydict=JSONParser().parse(request)
-            passenger_serializer=PassengerSerializer(passenger,data=mydict)
-            if(passenger_serializer.is_valid()):
-                passenger_serializer.save()
-                return JsonResponse(passenger_serializer.data,status=status.HTTP_200_OK)
+            passengersdict=JSONParser().parse(request)
+            passengers_serializer=PassengerSerializer(passengers,data=passengersdict)
+            if(passengers_serializer.is_valid()):
+                passengers_serializer.save()
+                return JsonResponse(passengers_serializer.data,status=status.HTTP_200_OK)
             else:
-                return JsonResponse(passenger_serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-    except passenger.DoesNotExist:
-        return HttpResponse("invalid passenger Id",status=status.HTTP_404_NOT_FOUND)
+                return JsonResponse(passengers_serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+    except Passenger.DoesNotExist:
+        return HttpResponse("invalid id",status=status.HTTP_404_NOT_FOUND)
+
+
+@csrf_exempt
+def search_api(request):
+    try:
+        getUsername = request.POST.get("username")
+        getPassenger = Passenger.objects.filter(username=getUsername)
+        passenger_serializer = PassengerSerializer(getPassenger, many=True)
+        return render(request,"searchpassenger.html",{"data":passenger_serializer.data})
+        # return JsonResponse(passenger_serializer.data,safe=False, status=status.HTTP_200_OK)
+    except Passenger.DoesNotExist:
+        return HttpResponse("Invalid Username",status=status.HTTP_404_NOT_FOUND)
+
+
+
+
+
+
 
 
